@@ -5,5 +5,16 @@ name = "go"
 enabled = true
 
   [analyzers.meta]
-  import_root = "github.com/vinhut/gapura"
-  dependencies_vendored = true
+  import_paths = ["github.com/sourya-deepsource/gapura"]
+
+[[analyzers]]
+name = "docker"
+enabled = true
+
+[[analyzers]]
+name = "javascript"
+enabled = true
+
+  [analyzers.meta]
+  ecma_version = "2020"
+  module_system = "commonjs"
