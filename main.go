@@ -60,6 +60,7 @@ func setupRouter(userdb models.UserDatabase) *gin.Engine {
 		token, exist := c.GetQuery("token")
 		if exist == false {
 			ret_c, err1 := c.Cookie("token")
+			
 			if err1 == nil {
 				token = ret_c
 			} else {
